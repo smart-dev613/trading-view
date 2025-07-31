@@ -1,7 +1,5 @@
 {
     "version": 2,
-    "buildCommand": "npm run install:all && npm run build:all",
-    "outputDirectory": "frontend/.next",
     "builds": [
         {
             "src": "frontend/package.json",
