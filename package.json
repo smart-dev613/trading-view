@@ -9,15 +9,11 @@
         "dev:frontend": "cd frontend && npm run dev",
         "build": "cd frontend && npm run build",
         "start": "cd frontend && npm start",
-        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+        "install:all": "cd backend && npm install && cd ../frontend && npm install",
         "postinstall": "npm run install:all"
     },
     "devDependencies": {
-        "@types/recharts": "^1.8.29",
-        "autoprefixer": "^10.4.21",
-        "concurrently": "^8.2.2",
-        "postcss": "^8.5.6",
-        "tailwindcss": "^3.4.0"
+        "concurrently": "^8.2.2"
     },
     "keywords": [
         "solana",
