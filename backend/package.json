@@ -5,7 +5,8 @@
     "main": "src/index.js",
     "scripts": {
         "dev": "nodemon src/index.js",
-        "start": "node src/index.js"
+        "start": "node src/index.js",
+        "build": "echo 'No build step required for backend'"
     },
     "dependencies": {
         "@apollo/client": "^3.13.9",
