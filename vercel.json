@@ -3,27 +3,22 @@
     "builds": [
         {
             "src": "frontend/package.json",
-            "use": "@vercel/next",
-            "config": {
-                "outputDirectory": "frontend/.next"
-            }
-        },
-        {
-            "src": "backend/src/index.js",
-            "use": "@vercel/node",
-            "config": {
-                "maxLambdaSize": "50mb"
-            }
+            "use": "@vercel/next"
         }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "backend/src/index.js"
+            "dest": "/api/index.js"
         },
         {
             "src": "/(.*)",
-            "dest": "frontend/$1"
+            "dest": "/frontend/$1"
         }
-    ]
+    ],
+    "functions": {
+        "api/index.js": {
+            "maxDuration": 30
+        }
+    }
 }
