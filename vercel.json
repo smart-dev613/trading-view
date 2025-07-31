@@ -1,15 +1,24 @@
 {
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/src/index.js"
+      "src": "frontend/package.json",
+      "use": "@vercel/next"
     },
     {
-      "source": "/(.*)",
-      "destination": "/frontend"
+      "src": "backend/src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/src/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "frontend/$1"
     }
   ],
   "installCommand": "npm install",
-  "buildCommand": "npm run build --prefix frontend",
-  "devCommand": "npm run dev --prefix frontend"
+  "buildCommand": "npm run build --prefix frontend"
 }
