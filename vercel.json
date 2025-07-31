@@ -19,5 +19,6 @@
       "dest": "frontend/$1"
     }
   ],
+  "installCommand": "npm install && cd .. npm install && /backend && npm install",
   "buildCommand": "npm run build --prefix frontend"
 }
