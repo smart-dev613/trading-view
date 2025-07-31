@@ -265,20 +265,16 @@ async function startServer() {
     server.applyMiddleware({ app, path: "/graphql" });
 
     // Only listen in development
-    if (process.env.NODE_ENV !== 'production') {
-        app.listen(PORT, () => {
-            console.log(
-                `🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`
-            );
-            console.log(`📊 Token aggregator API running on port ${PORT}`);
-        });
-    }
+    app.listen(PORT, () => {
+        console.log(
+            `🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`
+        );
+        console.log(`📊 Token aggregator API running on port ${PORT}`);
+    });
 }
 
 // Export the app for Vercel serverless functions
 module.exports = app;
 
 // Start server in development
-if (process.env.NODE_ENV !== 'production') {
-    startServer();
-}
+startServer();
