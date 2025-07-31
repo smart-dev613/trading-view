@@ -1,0 +1,31 @@
+{
+    "name": "solana-token-aggregator",
+    "version": "1.0.0",
+    "description": "A mini token aggregator DApp with GraphQL API, real-time charts, and DID-style authentication",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "dev:backend": "cd backend && npm run dev",
+        "dev:frontend": "cd frontend && npm run dev",
+        "build": "cd frontend && npm run build",
+        "start": "cd frontend && npm start",
+        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    },
+    "devDependencies": {
+        "@types/recharts": "^1.8.29",
+        "autoprefixer": "^10.4.21",
+        "concurrently": "^8.2.2",
+        "postcss": "^8.5.6",
+        "tailwindcss": "^3.4.0"
+    },
+    "keywords": [
+        "solana",
+        "token",
+        "aggregator",
+        "graphql",
+        "nextjs",
+        "tradingview"
+    ],
+    "author": "Your Name",
+    "license": "MIT"
+}

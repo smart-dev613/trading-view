@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+        @apply bg-[#18181c] text-white;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    }
+
+    .btn-secondary {
+        @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors duration-200;
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+    }
+
+    .token-card {
+        @apply bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md transition-shadow duration-200;
+    }
+
+    .price-change-positive {
+        @apply text-success-600 bg-success-50;
+    }
+
+    .price-change-negative {
+        @apply text-danger-600 bg-danger-50;
+    }
+}
+
+@layer utilities {
+    .text-gradient {
+        @apply bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent;
+    }
+}
