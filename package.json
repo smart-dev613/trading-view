@@ -9,7 +9,8 @@
         "dev:frontend": "cd frontend && npm run dev",
         "build": "cd frontend && npm run build",
         "start": "cd frontend && npm start",
-        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+        "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+        "postinstall": "npm run install:all"
     },
     "devDependencies": {
         "@types/recharts": "^1.8.29",
