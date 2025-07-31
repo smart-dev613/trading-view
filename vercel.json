@@ -1,5 +1,7 @@
 {
     "version": 2,
+    "buildCommand": "npm run install:all && npm run build:all",
+    "outputDirectory": "frontend/.next",
     "builds": [
         {
             "src": "frontend/package.json",
@@ -26,5 +28,12 @@
             "dest": "frontend/$1"
         }
     ],
-    "outputDirectory": "frontend/.next"
+    "functions": {
+        "backend/src/index.js": {
+            "maxDuration": 30
+        }
+    },
+    "env": {
+        "NODE_ENV": "production"
+    }
 }

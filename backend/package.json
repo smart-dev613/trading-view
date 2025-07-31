@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "nodemon src/index.js",
         "start": "node src/index.js",
-        "build": "echo 'No build step required for backend'"
+        "build": "echo 'No build step required for backend'",
+        "vercel-build": "echo 'Backend build completed'"
     },
     "dependencies": {
         "@apollo/client": "^3.13.9",

@@ -13,9 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const JWT_SECRET = process.env.JWT_SECRET || "your-secret-key";
 
-app.use(cors({
-    origin: 'https://trading-view-kappa.vercel.app/'
-}));
+app.use(cors());
 app.use(express.json());
 
 // Mock token data
